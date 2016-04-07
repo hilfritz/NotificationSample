@@ -1,6 +1,11 @@
 [
     {
+<<<<<<< HEAD
         "merged": "/Users/herdmacbook1/Desktop/fritz/NotificationSample/app/build/intermediates/res/merged/debug/menu/activity_main.xml",
         "source": "/Users/herdmacbook1/Desktop/fritz/NotificationSample/app/src/main/res/menu/activity_main.xml"
+=======
+        "merged": "/Users/herdmacbook1/Desktop/fritz/NotificationSample2/app/build/intermediates/res/merged/debug/menu/activity_main.xml",
+        "source": "/Users/herdmacbook1/Desktop/fritz/NotificationSample2/app/src/main/res/menu/activity_main.xml"
+>>>>>>> da5586c48453786ec9f6a768dffd6efa23231505
     }
 ]

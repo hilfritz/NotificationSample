@@ -1,6 +1,11 @@
 [
     {
+<<<<<<< HEAD
         "merged": "/Users/herdmacbook1/Desktop/fritz/NotificationSample/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_launcher.png",
         "source": "/Users/herdmacbook1/Desktop/fritz/NotificationSample/app/src/main/res/drawable-xhdpi/ic_launcher.png"
+=======
+        "merged": "/Users/herdmacbook1/Desktop/fritz/NotificationSample2/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_launcher.png",
+        "source": "/Users/herdmacbook1/Desktop/fritz/NotificationSample2/app/src/main/res/drawable-xhdpi/ic_launcher.png"
+>>>>>>> da5586c48453786ec9f6a768dffd6efa23231505
     }
 ]

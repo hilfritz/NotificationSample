@@ -19,6 +19,7 @@ import android.view.Menu;
 import android.view.View;
 
 /**
+ * @see https://github.com/hilfritz/NotificationSample/
  * @see http://stackoverflow.com/questions/6391870/how-exactly-to-use-notification-builder
  * @author hilfritz
  *
@@ -32,6 +33,7 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		Log.d(TAG, "onCreate() ");
 		setContentView(R.layout.activity_main);
 		timer = new Timer();
 		handler = new Handler();
@@ -56,7 +58,7 @@ public class MainActivity extends Activity {
 		                        	 str+=" on lockscreen";
 		                         else
 		                        	 str+=" not on lockscreen";
-		                         Log.d("mytag", str);
+		                         Log.d(TAG, "checkDeviceStatus() "+str);
 	                        }
 	               });
 	        }};
@@ -78,13 +80,18 @@ public class MainActivity extends Activity {
 		if (counter<0){
 			counter = 0;
 		}
-		createNotification("title:"+counter, "description for counter ="+counter, counter, R.drawable.ic_launcher);
+		//CREATE THE INTENT WITH INTENt EXTRAS
+		Intent intent = new Intent(this, NotificationActivity.class);
+		intent.putExtra(NotificationActivity.EXTRA_KEY1, "today is friday");
+		PendingIntent pendingIntent = NotificationUtil.getSamplePendingIntent(this, intent, 99);
+		NotificationUtil.createNotification(this, counter, "title:" + counter, "description for counter:" + counter, R.drawable.ic_launcher, pendingIntent);
 		counter++;
 	}	
 	
 	public void removeNotificationOnClick(View v){
 		Log.d(TAG, "removeNotificationOnClick()");
 		counter--;
+<<<<<<< HEAD
 		removeNotification(counter);
 	}
 	
@@ -121,6 +128,9 @@ public class MainActivity extends Activity {
 		Log.d(TAG, "removeNotification()");
 		 NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);  
 		 manager.cancel(notificationId);
+=======
+		NotificationUtil.removeNotification(this, counter);
+>>>>>>> master
 	}
 	
 	/**

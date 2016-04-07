@@ -29,15 +29,22 @@ public class NotificationActivity extends Activity {
 		String tag = "";
 		if (getIntent()!=null &&
 				(getIntent().getStringExtra(NotificationActivity.EXTRA_KEY1)!=null
-						&& getIntent().getStringExtra(NotificationActivity.EXTRA_KEY1).equalsIgnoreCase("")==false
+					&& getIntent().getStringExtra(NotificationActivity.EXTRA_KEY1).equalsIgnoreCase("")==false
 				)
 				){
 			tag = getIntent().getStringExtra(NotificationActivity.EXTRA_KEY1);
+<<<<<<< HEAD
 			String str = "intent extra: [id:<b>"+getIntent().getIntExtra(NotificationUtil.NOTIFICATION_ID, -1)+"</b> key:<b>"+NotificationActivity.EXTRA_KEY1+"</b> value:<b>"+tag+"</b>]";
 			textView.setText(Html.fromHtml(str));
 		}else{
 			String str = "intent extra: [id:<b>"+getIntent().getIntExtra(NotificationUtil.NOTIFICATION_ID, -1)+"</b> key:<b>"+NotificationActivity.EXTRA_KEY1+"</b> value:<b>null/empty</b>]";
 			textView.setText(Html.fromHtml(str));
+=======
+			textView.setText("intent extra: [key:"+NotificationActivity.EXTRA_KEY1+" value:"+tag+"]");
+		}else{
+			textView.setText("intent extra: [key:"+NotificationActivity.EXTRA_KEY1+" value:null/empty]");
+>>>>>>> master
 		}
 	}
+	
 }

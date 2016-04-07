@@ -1,6 +1,10 @@
 [
     {
+<<<<<<< HEAD
         "outputFile": "/Users/herdmacbook1/Desktop/fritz/NotificationSample/app/build/intermediates/res/merged/debug/values-v14/values-v14.xml",
+=======
+        "outputFile": "/Users/herdmacbook1/Desktop/fritz/NotificationSample2/app/build/intermediates/res/merged/debug/values-v14/values-v14.xml",
+>>>>>>> da5586c48453786ec9f6a768dffd6efa23231505
         "map": [
             {
                 "to": {
@@ -12,7 +16,11 @@
                     "endOffset": 201
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "/Users/herdmacbook1/Desktop/fritz/NotificationSample/app/src/main/res/values-v14/styles.xml",
+=======
+                    "file": "/Users/herdmacbook1/Desktop/fritz/NotificationSample2/app/src/main/res/values-v14/styles.xml",
+>>>>>>> da5586c48453786ec9f6a768dffd6efa23231505
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
