@@ -7,9 +7,15 @@ The following files were *not* copied into the new Gradle project; you
 should evaluate whether these are still needed in your project and if
 so manually move them:
 
+<<<<<<< HEAD
 * .DS_Store
 * .idea/
 * .idea/.name
+=======
+* .idea/
+* .idea/.name
+* .idea/NotificationSample.iml
+>>>>>>> da5586c48453786ec9f6a768dffd6efa23231505
 * .idea/compiler.xml
 * .idea/copyright/
 * .idea/copyright/profiles_settings.xml
@@ -18,6 +24,7 @@ so manually move them:
 * .idea/modules.xml
 * .idea/vcs.xml
 * .idea/workspace.xml
+<<<<<<< HEAD
 * NotificationSample.iml
 * app/
 * app/build.gradle
@@ -71,6 +78,10 @@ so manually move them:
 * ic_launcher-web.png
 * proguard-project.txt
 * settings.gradle
+=======
+* ic_launcher-web.png
+* proguard-project.txt
+>>>>>>> da5586c48453786ec9f6a768dffd6efa23231505
 
 Replaced Jars with Dependencies:
 --------------------------------

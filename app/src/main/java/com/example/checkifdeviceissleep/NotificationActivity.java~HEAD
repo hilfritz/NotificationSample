@@ -28,14 +28,13 @@ public class NotificationActivity extends Activity {
 		String tag = "";
 		if (getIntent()!=null &&
 				(getIntent().getStringExtra(NotificationActivity.EXTRA_KEY1)!=null
-					&& getIntent().getStringExtra(NotificationActivity.EXTRA_KEY1).equalsIgnoreCase("")==false
+						&& getIntent().getStringExtra(NotificationActivity.EXTRA_KEY1).equalsIgnoreCase("")==false
 				)
 				){
 			tag = getIntent().getStringExtra(NotificationActivity.EXTRA_KEY1);
-			textView.setText("intent extra: [key:"+NotificationActivity.EXTRA_KEY1+" value:"+tag+"]");
+			textView.setText("intent extra: [id:"+getIntent().getIntExtra(NotificationUtil.NOTIFICATION_ID, -1)+" key:"+NotificationActivity.EXTRA_KEY1+" value:"+tag+"]");
 		}else{
-			textView.setText("intent extra: [key:"+NotificationActivity.EXTRA_KEY1+" value:null/empty]");
+			textView.setText("intent extra: [id:"+getIntent().getIntExtra(NotificationUtil.NOTIFICATION_ID, -1)+" key:"+NotificationActivity.EXTRA_KEY1+" value:null/empty]");
 		}
 	}
-	
 }
