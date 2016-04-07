@@ -1,2 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        jar="/Users/herdmacbook1/Desktop/fritz/NotificationSample/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="3be474b1b21b31cf2fa93fe6bd641ae108d96452">
+        <dex dex="/Users/herdmacbook1/Desktop/fritz/NotificationSample/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.2.1_768bfe21c52913ff5a53dcdd4313d3faee0d6c98.jar" />
+    </item>
+    <item
+        jar="/Users/herdmacbook1/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.2.1/support-annotations-23.2.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="ccb693bc0774fcb637246f7360de25b4af7df318">
+        <dex dex="/Users/herdmacbook1/Desktop/fritz/NotificationSample/app/build/intermediates/pre-dexed/debug/support-annotations-23.2.1_27df2fc32a345d06739e3fe9fb9547783aea2e81.jar" />
+    </item>
+    <item
+        jar="/Users/herdmacbook1/Desktop/fritz/NotificationSample/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/libs/internal_impl-23.2.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="607a3d0b8013b4ccbfeb0b7cb293351994e021fb">
+        <dex dex="/Users/herdmacbook1/Desktop/fritz/NotificationSample/app/build/intermediates/pre-dexed/debug/internal_impl-23.2.1_731a6cf1928deb582721d545f5e4aa5dd5ea1284.jar" />
+    </item>
+
+</items>

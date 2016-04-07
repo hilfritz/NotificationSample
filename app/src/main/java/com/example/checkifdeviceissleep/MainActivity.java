@@ -41,7 +41,7 @@ public class MainActivity extends Activity {
 	}
 	String str = "";
 	private void checkDeviceStatus(){
-		Log.d(TAG, "checkDeviceStatus() ");
+
 		timer = new Timer();
 		handler = new Handler();
 		
@@ -76,6 +76,7 @@ public class MainActivity extends Activity {
 	}
 
 	public void createNotificationOnClick(View v){
+		Log.d(TAG, "createNotificationOnClick()");
 		if (counter<0){
 			counter = 0;
 		}
@@ -83,13 +84,49 @@ public class MainActivity extends Activity {
 		Intent intent = new Intent(this, NotificationActivity.class);
 		intent.putExtra(NotificationActivity.EXTRA_KEY1, "today is friday");
 		PendingIntent pendingIntent = NotificationUtil.getSamplePendingIntent(this, intent, 99);
-		NotificationUtil.createNotification(this, counter, "title:" + counter, "description for counter:" + counter, R.drawable.ic_launcher, pendingIntent);
+		createNotification("title:"+counter, "description:"+counter, counter, R.drawable.ic_launcher);
 		counter++;
 	}	
 	
 	public void removeNotificationOnClick(View v){
+		Log.d(TAG, "removeNotificationOnClick()");
 		counter--;
-		NotificationUtil.removeNotification(this, counter);
+		removeNotification(counter);
+	}
+	
+	private void createNotification(String title, String description, int notificationId, int smallIcon){
+		Log.d(TAG, "createNotification() creating notification [notificationId:"+notificationId+"]");
+		NotificationManager notificationManager = (NotificationManager)getSystemService(NOTIFICATION_SERVICE);
+		//CREATE THE INTENT TO START WHEN THE NOTIFICATION IS CLICKED
+		Intent intent = new Intent(this, NotificationActivity.class);
+		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+		intent.putExtra(NotificationActivity.EXTRA_KEY1, "today is the day ("+notificationId+")");
+		intent.putExtra(NotificationUtil.NOTIFICATION_ID, notificationId);
+
+		//CREATE THE PENDING INTENT
+		PendingIntent pIntent = PendingIntent.getActivity(this, counter, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+		// Build notification
+		// Actions are just fake
+		NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this)
+		        .setContentTitle(title)
+		        .setContentText(description)
+		        .setSmallIcon(smallIcon)
+		        .setContentIntent(pIntent);
+		Notification notification = notificationBuilder.build();
+		// Hide the notification after its selected
+		//noti.flags |= Notification.FLAG_AUTO_CANCEL;
+		notification.flags |=Notification.DEFAULT_VIBRATE;
+		notification.flags |=Notification.DEFAULT_SOUND;
+		notification.flags |=Notification.DEFAULT_LIGHTS;
+		notification.flags |=Notification.FLAG_AUTO_CANCEL;
+		notificationManager.notify(notificationId, notification);
+	}
+	
+	public void removeNotification(int notificationId){
+		Log.d(TAG, "removeNotification()");
+		 NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);  
+		 manager.cancel(notificationId);
 	}
 	
 	/**

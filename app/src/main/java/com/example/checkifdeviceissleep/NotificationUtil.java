@@ -12,11 +12,9 @@ import android.support.v4.app.NotificationCompat;
  * Created by hilfritz on 7/4/16.
  */
 public class NotificationUtil {
-<<<<<<< HEAD
-    public static final String NOTIFICATION_ID = "notificationId";
-=======
 
->>>>>>> da5586c48453786ec9f6a768dffd6efa23231505
+    public static final String NOTIFICATION_ID = "notificationId";
+
 
 
     /**
