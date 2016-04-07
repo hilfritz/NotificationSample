@@ -2,6 +2,7 @@ package com.example.checkifdeviceissleep;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.text.Html;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -32,9 +33,11 @@ public class NotificationActivity extends Activity {
 				)
 				){
 			tag = getIntent().getStringExtra(NotificationActivity.EXTRA_KEY1);
-			textView.setText("intent extra: [id:"+getIntent().getIntExtra(NotificationUtil.NOTIFICATION_ID, -1)+" key:"+NotificationActivity.EXTRA_KEY1+" value:"+tag+"]");
+			String str = "intent extra: [id:<b>"+getIntent().getIntExtra(NotificationUtil.NOTIFICATION_ID, -1)+"</b> key:<b>"+NotificationActivity.EXTRA_KEY1+"</b> value:<b>"+tag+"</b>]";
+			textView.setText(Html.fromHtml(str));
 		}else{
-			textView.setText("intent extra: [id:"+getIntent().getIntExtra(NotificationUtil.NOTIFICATION_ID, -1)+" key:"+NotificationActivity.EXTRA_KEY1+" value:null/empty]");
+			String str = "intent extra: [id:<b>"+getIntent().getIntExtra(NotificationUtil.NOTIFICATION_ID, -1)+"</b> key:<b>"+NotificationActivity.EXTRA_KEY1+"</b> value:<b>null/empty</b>]";
+			textView.setText(Html.fromHtml(str));
 		}
 	}
 }

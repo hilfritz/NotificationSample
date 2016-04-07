@@ -39,7 +39,7 @@ public class MainActivity extends Activity {
 	}
 	String str = "";
 	private void checkDeviceStatus(){
-		Log.d(TAG, "checkDeviceStatus() ");
+
 		timer = new Timer();
 		handler = new Handler();
 		
@@ -74,6 +74,7 @@ public class MainActivity extends Activity {
 	}
 
 	public void createNotificationOnClick(View v){
+		Log.d(TAG, "createNotificationOnClick()");
 		if (counter<0){
 			counter = 0;
 		}
@@ -82,6 +83,7 @@ public class MainActivity extends Activity {
 	}	
 	
 	public void removeNotificationOnClick(View v){
+		Log.d(TAG, "removeNotificationOnClick()");
 		counter--;
 		removeNotification(counter);
 	}
@@ -92,6 +94,7 @@ public class MainActivity extends Activity {
 		//CREATE THE INTENT TO START WHEN THE NOTIFICATION IS CLICKED
 		Intent intent = new Intent(this, NotificationActivity.class);
 		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+		intent.putExtra(NotificationActivity.EXTRA_KEY1, "today is the day ("+notificationId+")");
 		intent.putExtra(NotificationUtil.NOTIFICATION_ID, notificationId);
 
 		//CREATE THE PENDING INTENT
@@ -115,6 +118,7 @@ public class MainActivity extends Activity {
 	}
 	
 	public void removeNotification(int notificationId){
+		Log.d(TAG, "removeNotification()");
 		 NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);  
 		 manager.cancel(notificationId);
 	}
