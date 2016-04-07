@@ -19,9 +19,5 @@ android {
 }
 
 dependencies {
-<<<<<<< HEAD
-    compile 'com.android.support:support-v4:18.0.0'
-=======
     compile 'com.android.support:support-v4:23.2.1'
->>>>>>> da5586c48453786ec9f6a768dffd6efa23231505
 }

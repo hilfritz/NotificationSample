@@ -84,14 +84,13 @@ public class MainActivity extends Activity {
 		Intent intent = new Intent(this, NotificationActivity.class);
 		intent.putExtra(NotificationActivity.EXTRA_KEY1, "today is friday");
 		PendingIntent pendingIntent = NotificationUtil.getSamplePendingIntent(this, intent, 99);
-		NotificationUtil.createNotification(this, counter, "title:" + counter, "description for counter:" + counter, R.drawable.ic_launcher, pendingIntent);
+		createNotification("title:"+counter, "description:"+counter, counter, R.drawable.ic_launcher);
 		counter++;
 	}	
 	
 	public void removeNotificationOnClick(View v){
 		Log.d(TAG, "removeNotificationOnClick()");
 		counter--;
-<<<<<<< HEAD
 		removeNotification(counter);
 	}
 	
@@ -128,9 +127,6 @@ public class MainActivity extends Activity {
 		Log.d(TAG, "removeNotification()");
 		 NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);  
 		 manager.cancel(notificationId);
-=======
-		NotificationUtil.removeNotification(this, counter);
->>>>>>> master
 	}
 	
 	/**

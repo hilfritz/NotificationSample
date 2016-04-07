@@ -1,6 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
 <merger version="3"><dataSet config="main"><source path="/Users/herdmacbook1/Desktop/fritz/NotificationSample/app/src/main/jniLibs"/></dataSet><dataSet config="debug"><source path="/Users/herdmacbook1/Desktop/fritz/NotificationSample/app/src/debug/jniLibs"/></dataSet></merger>
-=======
-<merger version="3"><dataSet config="main"><source path="/Users/herdmacbook1/Desktop/fritz/NotificationSample2/app/src/main/jniLibs"/></dataSet><dataSet config="debug"><source path="/Users/herdmacbook1/Desktop/fritz/NotificationSample2/app/src/debug/jniLibs"/></dataSet></merger>
->>>>>>> da5586c48453786ec9f6a768dffd6efa23231505
